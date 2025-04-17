@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calvin Xavian - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="portfolio">
+    <!-- Left Column - Profile -->
+    <div class="column profile-column">
+      <div class="profile-header">
+        <div class="profile-image">
+          <img src="assets/_DSC0350.jpg" alt="Profile">
+        </div>
+        <div class="profile-info">
+          <h1>Calvin Xavian</h1>
+          <div class="availability">Available between 9:00 AM — 8:00 PM EDT</div>
+        </div>
+      </div>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="card-header">
+            <i class="fa-regular fa-clock"></i>
+            <span id="current-day">Monday</span>
+          </div>
+          <div class="card-content">
+            <span id="current-time">12:30</span> <span>GMT+8</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-header">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Send Message</span>
+          </div>
+          <div class="card-content highlight">Say "Hello!"</div>
+        </div>
+      </div>
+
+      <div class="coming-soon-container">
+        <div class="coming-soon-box">
+          <div class="grid-lines"></div>
+          <div class="coming-soon-text">Coming soon...</div>
+        </div>
+      </div>
+
+      <div class="bio-section">
+        <p>Combining creativity with technical expertise, I leverage my design and development background to craft forward-thinking solutions while staying up-to-date with trends.</p>
+        <div class="bio-image">
+          <img src="assets/tutel.png" style="transform: scaleX(-1);" width="150" alt="Decorative apple">
+        </div>
+      </div>
+
+      <div class="location-section">
+        <div>Bali, INA</div>
+      </div>
+
+      <div class="footer-info">
+        <div>portfolio_v-3.0</div>
+        <div>theme: $<span class="highlight-green">(custom.ui)</span></div>
+      </div>
+    </div>
+
+    <!-- Middle Column - Folder Navigation -->
+    <div class="column folder-column">
+      <div class="view-controls">
+        <div class="view-buttons">
+          <button id="grid-view" class="view-button active" aria-label="Grid View">
+            <i class="fa-solid fa-th"></i>
+          </button>
+          <button id="list-view" class="view-button" aria-label="List View">
+            <i class="fa-solid fa-list"></i>
+          </button>
+          <button id="detail-view" class="view-button" aria-label="Detail View">
+            <i class="fa-solid fa-table-columns"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="folder-view" class="folder-view">
+        <!-- Folder structure rendered by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Right Column - File Content -->
+    <div class="column content-column">
+      <div id="file-content" class="file-content">
+        <!-- File content will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

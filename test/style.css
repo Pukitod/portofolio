@@ -1,0 +1,370 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    padding: 1rem;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-image {
+    position: relative;
+    margin-right: 1rem;
+  }
+  
+  .profile-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .status-indicator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #f97316;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  
+  .profile-info h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  
+  .availability {
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .decorative-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.7;
+  }
+  
+  .decorative-image img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Info Cards */
+  .info-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+    border-top: 1px dotted #ddd;
+    border-bottom: 1px dotted #ddd;
+    padding: 1rem 0;
+  }
+  
+  .info-card {
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    background-color: #f9f9f9;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-header i {
+    margin-right: 0.5rem;
+  }
+  
+  .card-content {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #f97316;
+    font-weight: 500;
+  }
+  
+  /* Bio Section */
+  .bio-section {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted #ddd;
+  }
+  
+  .bio-section p {
+    font-size: 0.875rem;
+    color: #333;
+  }
+  
+  /* Folder Structure */
+  .folder-structure {
+    padding: 0 1rem 2rem 1rem;
+  }
+  
+  .folder-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .folder-item i {
+    margin-right: 0.5rem;
+    width: 20px;
+    text-align: center;
+  }
+  
+  .folder-item .folder-name {
+    flex: 1;
+  }
+  
+  .folder-item .folder-toggle {
+    margin-left: auto;
+    color: #999;
+    transition: transform 0.2s;
+  }
+  
+  .folder-item.expanded .folder-toggle {
+    transform: rotate(90deg);
+  }
+  
+  .folder-children {
+    padding-left: 1.5rem;
+    display: none;
+  }
+  
+  .folder-item.expanded + .folder-children {
+    display: block;
+  }
+  
+  .file-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+  
+  .file-item i {
+    margin-right: 0.5rem;
+    color: #666;
+  }
+  
+  .file-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Popup Styles */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+  
+  .popup-overlay.active .popup-content {
+    transform: scale(1);
+  }
+  
+  .popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .popup-header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .close-popup {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .popup-body {
+    padding: 1.5rem;
+  }
+  
+  /* File Content Styles */
+  .file-content img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .file-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .skills-section h3 {
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  .skills-list {
+    list-style: none;
+  }
+  
+  .skills-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+  }
+  
+  .skills-list li::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #f97316;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  /* Experience Content */
+  .experience-item {
+    border-left: 2px solid #f97316;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-item h3 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .experience-item .company {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Tools Content */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tools-category {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+  }
+  
+  .tools-category h3 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .tools-list {
+    list-style: none;
+    font-size: 0.8125rem;
+  }
+  
+  .tools-list li {
+    margin-bottom: 0.25rem;
+    color: #555;
+  }
+  
+  .learning-section {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+  }
+  
+  .learning-section h3 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .learning-section p {
+    font-size: 0.8125rem;
+    color: #555;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .popup-content {
+      width: 80%;
+    }
+  }
+  

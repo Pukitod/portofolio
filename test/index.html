@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Joe Lee - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="portfolio">
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <div class="profile-header">
+        <div class="profile-image">
+          <img src="https://via.placeholder.com/100" alt="Joe Lee">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="profile-info">
+          <h1>Joe Lee</h1>
+          <div class="availability">Available between 9:00 AM — 8:00 PM EDT</div>
+        </div>
+        <div class="decorative-image">
+          <img src="https://via.placeholder.com/40" alt="Decorative apple">
+        </div>
+      </div>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="card-header">
+            <i class="fa-regular fa-clock"></i>
+            <span id="current-day">Tuesday</span>
+          </div>
+          <div class="card-content">
+            <span id="current-time">8:41 AM</span> <span>EDT</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-header">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Send Message</span>
+          </div>
+          <div class="card-content highlight">Say "Hello!"</div>
+        </div>
+      </div>
+
+      <div class="bio-section">
+        <p>Combining creativity with technical expertise, I leverage my design and development background to craft forward-thinking solutions while staying up-to-date with trends.</p>
+      </div>
+    </div>
+
+    <!-- Folder Structure -->
+    <div class="folder-structure" id="folder-structure">
+      <!-- Will be populated by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Content Popup -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h2 id="popup-title">File Title</h2>
+        <button class="close-popup" id="close-popup">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <div class="popup-body" id="popup-body">
+        <!-- Content will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
